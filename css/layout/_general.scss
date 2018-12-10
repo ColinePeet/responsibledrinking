@@ -1,0 +1,93 @@
+body{
+    width: 100%;
+    font-family: 'lato', sans-serif;
+    color: #212326;
+    text-align: center;
+}
+
+//BACKGROUND - OPACITY
+.background-wrap{
+    width: 100%;
+    height: 100vh;
+    color: white;
+    &::before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        z-index:1;
+    }
+    div{
+        z-index: 100;
+        position: relative;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        .arrow-header{
+            margin-top: 40px;
+        }
+    }
+}
+
+//BUTTON
+.button{
+    padding: 12px 20px;
+    border-radius: 3px;
+    border: 2px solid #212326;
+    color: #212326;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: .2s all ease-in-out;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30px;
+    &:hover{
+        background: #212326;
+        color: white;
+    }
+}
+.button.white{
+    border: 2px solid white;
+    color: white;
+    &:hover{
+        background: white;
+        color: #212326;
+    }
+}
+
+
+//WRAP - CENTER
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+
+//FONTS
+a{
+    text-decoration: none;
+    color: #212326;
+}
+p{
+    font-size: 18px;
+}
+h1{
+    font-size: 60px;
+    font-weight: bolder
+}
+h2{
+    font-size: 42px;
+}
+
+//IMG
+img{
+    max-width: 100%;
+    display: block;
+}
