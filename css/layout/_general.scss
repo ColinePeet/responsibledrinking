@@ -31,6 +31,10 @@ body{
             margin: -1.5px;
         }
     }
+    &.scroll-burger{
+        position: fixed;
+        background-color: #212326;
+    }
 }
 .burger span{
     width: 70%;
@@ -38,6 +42,7 @@ body{
     background-color: white;
     border-radius: 3px;
     margin: 2.5px 0;
+    transition: .2s all linear;
 }
 
 // MENU - BURGER
@@ -60,6 +65,7 @@ body{
     }
     &.menu-active{ // AU CLIC
         display: flex;
+
     }
 }
 
@@ -89,6 +95,12 @@ body{
             margin-top: 40px;
         }
     }
+}
+
+//PARALLAX JS
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
 }
 
 //BUTTON
