@@ -5,6 +5,66 @@ body{
     text-align: center;
 }
 
+// BURGER
+.burger{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:30px;
+    height:30px;
+    cursor: pointer;
+    z-index: 9;
+    top: 20px;
+    left: 20px;
+    &.burger-active{ // AU CLIC
+        .tranche-top{
+            transform: rotateZ(45deg);
+            margin: 0;
+        }
+        .tranche-center{
+            display: none;
+        }
+        .tranche-bottom{
+            transform: rotateZ(-45deg);
+            margin: -1.5px;
+        }
+    }
+}
+.burger span{
+    width: 70%;
+    height: 2px;
+    background-color: white;
+    border-radius: 3px;
+    margin: 2.5px 0;
+}
+
+// MENU - BURGER
+.menu-burger{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(7, 4, 3, 0.9);
+    z-index: 8;
+    a{
+        text-transform: uppercase;
+        color: white;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 60px;
+    }
+    &.menu-active{ // AU CLIC
+        display: flex;
+    }
+}
+
+
+
 //BACKGROUND - OPACITY
 .background-wrap{
     width: 100%;
@@ -24,7 +84,7 @@ body{
         z-index:1;
     }
     .title{
-        z-index: 100;
+        z-index: 6;
         .arrow-header{
             margin-top: 40px;
         }
