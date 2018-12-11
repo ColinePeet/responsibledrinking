@@ -1,3 +1,6 @@
+::selection {
+    background:rgba(crimson, .7);
+}
 body{
     width: 100%;
     font-family: 'lato', sans-serif;
@@ -50,22 +53,37 @@ body{
     position: fixed;
     width: 100%;
     height: 100vh;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: rgba(7, 4, 3, 0.9);
     z-index: 8;
+    visibility: hidden;
+    opacity:0;
+    transition:.3s all ease-in-out;
+    transform:scale(1.3);
     a{
         text-transform: uppercase;
         color: white;
         font-weight: bold;
         font-size: 26px;
-        line-height: 60px;
+        line-height: 65px;
+        transition: .1s all ease-in-out;
+        &::selection {
+            background:none;
+        }
+        &:hover{
+            color: lightseagreen;
+        }
+        &.blue {
+            color: lightseagreen;
+        }
     }
     &.menu-active{ // AU CLIC
-        display: flex;
-
+        visibility: visible;
+        opacity: 1;        
+        transform:scale(1);
     }
 }
 
